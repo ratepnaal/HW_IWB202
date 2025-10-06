@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدخال معلومات تطبيق جديد</title>
+    <link rel="stylesheet" href="Style.css"> 
+</head>
+<body>
+    
+    <header>
+        <h1>إدخال بيانات تطبيق جديد</h1>
+        <nav>
+            <a href="home.html">الرئيسية</a> |
+            <a href="AboutUs.html">من نحن</a> |
+            <a href="apps.html">التطبيقات</a> |
+            <a href="add_app.html">إضافة تطبيق جديد</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+
+        <form id="addAppForm" onsubmit="return validateAndSubmit(event);">
+            
+            <label for="appName">اسم التطبيق:</label>
+            <input type="text" id="appName" name="appName" class="text-input-style" required>
+            <p class="error-message" id="errorAppName" style="color: red;"></p>
+            
+            <label for="manufacturer">الشركة المصنعة :</label>
+            <input type="text" id="manufacturer" name="manufacturer" class="text-input-style" required>
+            <p class="error-message" id="errorManufacturer" style="color: red;"></p>
+            
+            <label for="appUrl">الموقع الإلكتروني :</label>
+            <input type="text" id="appUrl" name="appUrl" class="text-input-style" required>
+            <p class="error-message" id="errorAppUrl" style="color: red;"></p>
+
+            <label>مجاني أم لا:</label>
+            <div class="radio-group">
+                <input type="radio" id="isFreeYes" name="isFree" value="مجاني" required>
+                <label for="isFreeYes">مجاني</label>
+                <input type="radio" id="isFreeNo" name="isFree" value="غير مجاني">
+                <label for="isFreeNo">غير مجاني</label>
+            </div>
+            
+            <label for="category">مجال الاستخدام:</label>
+            <select id="category" name="category" required>
+                <option value="">اختر المجال</option>
+                <option value="Robotics">Robotics</option>
+                <option value="Education">Education</option>
+                <option value="E-Commerce">E-Commerce</option>
+                <option value="Healthcare">Healthcare</option>
+            </select>
+            
+            <label for="summary">شرح مختصر عن التطبيق:</label>
+            <textarea id="summary" name="summary" rows="4" required></textarea>
+            
+            <button type="submit" id="submitBtn">إرسال</button>
+            <button type="reset">إعادة</button> 
+        </form>
+    
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Solutions Co.</p>
+    </footer>
+
+    <script src="myFunctions.js"></script> 
+</body>
+</html>

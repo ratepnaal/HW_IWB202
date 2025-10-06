@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيقات الذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="Style.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>جدول تطبيقات الذكاء الاصطناعي</h1>
+        <nav>
+            <a href="home.html">الرئيسية</a> |
+            <a href="AboutUs.html">من نحن</a> |
+            <a href="apps.html">التطبيقات</a> |
+            <a href="add_app.html">إضافة تطبيق جديد</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <h2>قائمة التطبيقات</h2>
+        <p>**ملاحظة:** يتم عرض التطبيق الجديد الذي تم إدخاله في الأعلى.</p>
+        
+        <table id="appsTable">
+            <thead>
+                <tr>
+                    <th>اسم التطبيق</th>
+                    <th>اسم الشركة المطورة</th>
+                    <th>مجال الاستخدام</th>
+                    <th>مجاني/غير مجاني</th>
+                    <th>إظهار التفاصيل</th>
+                </tr>
+            </thead>
+            <tbody id="appRows">
+                <tr data-app-id="1">
+                    <td>ChatGPT</td>
+                    <td>OpenAI</td>
+                    <td>NLP</td>
+                    <td>غير مجاني</td>
+                    <td><button class="toggle-details" data-id="1">عرض/إخفاء</button></td>
+                </tr>
+                <tr class="details-row" id="details-1">
+                    <td colspan="5">
+                        <img src="images/chatgpt_logo.png" alt="ChatGPT Logo" style="width:50px;">
+                        <strong>شرح مختصر:</strong> نموذج لغة كبير يولد نصوصاً شبيهة بالبشر.<br>
+                        <strong>عنوان الموقع:</strong> <a href="https://openai.com" target="_blank">OpenAI</a><br>
+                        <audio controls><source src="media/audio1.mp3" type="audio/mp3"></audio>
+                    </td>
+                </tr>
+
+                <tr data-app-id="2">
+                    <td>DeepMind AlphaGo</td>
+                    <td>Google</td>
+                    <td>Games</td>
+                    <td>غير مجاني</td>
+                    <td><button class="toggle-details" data-id="2">عرض/إخفاء</button></td>
+                </tr>
+                <tr class="details-row" id="details-2">
+                    <td colspan="5">
+                        <strong>شرح مختصر:</strong> برنامج حاسوب طورته DeepMind للعب لعبة Go.<br>
+                        <strong>عنوان الموقع:</strong> <a href="https://deepmind.com" target="_blank">DeepMind</a>
+                    </td>
+                </tr>
+                
+                <tr data-app-id="3">
+                    <td>Midjourney</td>
+                    <td>Midjourney, Inc.</td>
+                    <td>Art Generation</td>
+                    <td>غير مجاني</td>
+                    <td><button class="toggle-details" data-id="3">عرض/إخفاء</button></td>
+                </tr>
+                <tr class="details-row" id="details-3">
+                    <td colspan="5">
+                        <strong>شرح مختصر:</strong> نظام للذكاء الاصطناعي يولد صوراً فنية من الأوصاف النصية.<br>
+                        <strong>عنوان الموقع:</strong> <a href="https://midjourney.com" target="_blank">Midjourney</a>
+                    </td>
+                </tr>
+                
+                <tr data-app-id="4">
+                    <td>IBM Watson</td>
+                    <td>IBM</td>
+                    <td>Healthcare</td>
+                    <td>غير مجاني</td>
+                    <td><button class="toggle-details" data-id="4">عرض/إخفاء</button></td>
+                </tr>
+                <tr class="details-row" id="details-4">
+                    <td colspan="5">
+                        <strong>شرح مختصر:</strong> منصة حوسبة معرفية تستخدم للتحليل الطبي والبيانات الكبيرة.<br>
+                        <strong>عنوان الموقع:</strong> <a href="https://ibm.com" target="_blank">IBM</a>
+                    </td>
+                </tr>
+                
+                <tr data-app-id="5">
+                    <td>GitHub Copilot</td>
+                    <td>GitHub</td>
+                    <td>Coding Assistance</td>
+                    <td>غير مجاني</td>
+                    <td><button class="toggle-details" data-id="5">عرض/إخفاء</button></td>
+                </tr>
+                <tr class="details-row" id="details-5">
+                    <td colspan="5">
+                        <strong>شرح مختصر:</strong> مساعد آلي للمبرمجين يعتمد على الذكاء الاصطناعي لإكمال الأكواد.<br>
+                        <strong>عنوان الموقع:</strong> <a href="https://github.com/features/copilot" target="_blank">GitHub</a>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Solutions Co.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="myFunctions.js"></script> 
+</body>
+</html>
